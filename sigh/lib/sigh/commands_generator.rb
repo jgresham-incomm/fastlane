@@ -115,6 +115,7 @@ module Sigh
         c.option('-g', '--new_bundle_id STRING', String, 'New application bundle ID (CFBundleIdentifier)')
         c.option('-h', '--new_appclip_bundle_id STRING', String, 'New AppClip bundle ID (CFBundleIdentifier of AppClip)')
         c.option('--keychain_path STRING', String, 'Path to the keychain that /usr/bin/codesign should use')
+        c.option('--page_size STRING', String, 'Page size in bytes for codesign --pagesize (power of two)')
 
         c.action do |args, options|
           Sigh::Resign.new.run(options, args)
